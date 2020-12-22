@@ -17,7 +17,8 @@ jobs:
       - run: flutter pub get
       - run: flutter build web --release
       - run: cp -R build/web/* webdeploy/public/
-      - uses: w9jds/firebase-action@master --project solid-citadel-247806
+      - run: use --add
+      - uses: w9jds/firebase-action@master 
         with:
           args: deploy --only hosting
         env:
